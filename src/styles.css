@@ -1,0 +1,78 @@
+:root {
+  background-image: url('./imgs/background.jpg');
+}
+h1 {
+  text-align: center;
+}
+h5 {
+  color: white;
+  font-size: 22px;
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid rgb(208, 208, 0);
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 0 auto;
+  width: 65%;
+  height: 280px;
+  padding: 50px;
+  gap: 20px;
+}
+.container > div {
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 10px;
+  /* transform: rotate(20deg); */
+}
+.c1 {
+  transform: rotate(15deg);
+  transform-origin: 137% 21%;
+}
+.c2 {
+  transform: rotate(5deg);
+  transform-origin: 100% 50%;
+}
+.c3 {
+  transform-origin: 30% 60%;
+}
+.c4 {
+  transform: rotate(-5deg);
+  transform-origin: -20% 40%;
+}
+.c5 {
+  transform: rotate(-14deg);
+  transform-origin: -53% 20%;
+}
+.flexContent {
+  display: flex;
+  justify-content: center;
+}
+.dealBtn {
+  background-color: rgb(209, 209, 3);
+  width: 180px;
+  height: 80px;
+  border-radius: 8px;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.flexReset {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.resetBtn {
+  background-color: transparent;
+  color: yellow;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  width: 100px;
+  height: 35px;
+  margin-right: 80px;
+  font-weight: bolder;
+  font-size: 20px;
+}
