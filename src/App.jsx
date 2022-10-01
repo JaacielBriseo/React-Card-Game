@@ -4,6 +4,7 @@ import { deck } from './helpers/deck';
 
 export const App = () => {
   const [cards, setCards] = useState(deck);
+  const [toDisplayCards, setToDisplayCards] = useState([]);
 
   return (
     <>
@@ -11,9 +12,13 @@ export const App = () => {
 
       <CardsLeft deck={deck} />
 
-      <DisplayCards />
+      <DisplayCards toDisplayCards={toDisplayCards}/>
 
-      <DealButton deck={deck} setCards={setCards} />
+      <DealButton
+        deck={deck}
+        setCards={setCards}
+        setToDisplayCards={setToDisplayCards}
+      />
 
       <ResetButton />
     </>
