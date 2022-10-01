@@ -1,6 +1,7 @@
 
-export const CardsLeft = () => {
+export const CardsLeft = ({deck}) => {
+
   return (
-    <h5>Cards left : </h5>
+    <h5>Cards left :{deck.length} </h5>
   )
 }

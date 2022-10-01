@@ -1,17 +1,19 @@
-import { CardsLeft } from './components/CardsLeft';
-import { DealButton } from './components/DealButton';
-import { DisplayCards } from './components/DisplayCards';
-import { ResetButton } from './components/ResetButton';
+import { useState } from 'react';
+import { CardsLeft, DealButton, ResetButton, DisplayCards } from './components';
+import { deck } from './helpers/deck';
 
 export const App = () => {
+  const [cards, setCards] = useState(deck);
+
   return (
     <>
       <h1>Cards Game</h1>
-      <CardsLeft />
+
+      <CardsLeft deck={deck} />
 
       <DisplayCards />
 
-      <DealButton />
+      <DealButton deck={deck} setCards={setCards} />
 
       <ResetButton />
     </>
