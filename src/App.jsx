@@ -4,22 +4,21 @@ import { deck } from './helpers/deck';
 
 export const App = () => {
   const [cards, setCards] = useState(deck);
-  const [toDisplayCards, setToDisplayCards] = useState([]);
+  const [toDisplayCards, setToDisplayCards] = useState(['', '', '', '', '']);
+  const [aces, setAces] = useState(4);
 
   return (
     <>
       <h1>Cards Game</h1>
-
-      <CardsLeft deck={deck} />
-
-      <DisplayCards toDisplayCards={toDisplayCards}/>
-
+      <CardsLeft deck={deck} aces={aces} />
+      <DisplayCards toDisplayCards={toDisplayCards} />
       <DealButton
         deck={deck}
         setCards={setCards}
         setToDisplayCards={setToDisplayCards}
+        setAces={setAces}
+        aces={aces}
       />
-
       <ResetButton />
     </>
   );

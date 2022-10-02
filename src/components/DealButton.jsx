@@ -1,4 +1,12 @@
-export const DealButton = ({ deck, setCards, setToDisplayCards }) => {
+import { detectAce } from '../helpers/detectAce';
+
+export const DealButton = ({
+  deck,
+  setCards,
+  setToDisplayCards,
+  setAces,
+  aces,
+}) => {
   const selectedCards = [];
   const toShow = [];
   const handleDeal = () => {
@@ -7,12 +15,14 @@ export const DealButton = ({ deck, setCards, setToDisplayCards }) => {
       const randomValue = deck[random];
       selectedCards.push(randomValue);
       setCards(deck.splice(random, 1));
+      detectAce(selectedCards, setAces, aces);
     }
     selectedCards.map((element) => {
       toShow.push(element);
     });
     setToDisplayCards(toShow);
   };
+
   return (
     <div className="flexContent">
       <button className="dealBtn" onClick={handleDeal}>

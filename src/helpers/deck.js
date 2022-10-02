@@ -1,7 +1,7 @@
 export const deck = [];
 const suits = ['diamonds', 'spades', 'clubs', 'hearts'];
 const values = [
-  'A',
+  'Ace',
   '2',
   '3',
   '4',
