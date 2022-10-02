@@ -21,13 +21,15 @@ h5 {
   width: 65%;
   height: 280px;
   padding: 50px;
-  gap: 20px;
+  padding-left: 137px;
 }
 .container > div {
   background-color: lightgray;
   border-radius: 10px;
   margin: 10px;
   font-size: 30px;
+  width: 5em;
+  height: 9em;
   /* transform: rotate(20deg); */
 }
 

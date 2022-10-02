@@ -1,7 +1,7 @@
 export const DisplayCards = ({ toDisplayCards }) => {
   const items = toDisplayCards.map((element, index) => {
     return (
-      <div key={index} className="c3">
+      <div key={index}>
         {element}
       </div>
     );
