@@ -1,4 +1,5 @@
 import { detectAce } from '../helpers/detectAce';
+import { onDeal } from '../helpers/handDeal';
 
 export const DealButton = ({
   deck,
@@ -9,23 +10,22 @@ export const DealButton = ({
 }) => {
   const selectedCards = [];
   const toShow = [];
-  const handleDeal = () => {
-    for (let index = 0; index < 5; index++) {
-      const random = Math.floor(Math.random() * deck.length);
-      const randomValue = deck[random];
-      selectedCards.push(randomValue);
-      setCards(deck.splice(random, 1));
-      detectAce(selectedCards, setAces, aces);
-    }
-    selectedCards.map((element) => {
-      toShow.push(element);
-    });
-    setToDisplayCards(toShow);
+  const handleClick = () => {
+    onDeal(
+      deck,
+      selectedCards,
+      detectAce,
+      setAces,
+      aces,
+      toShow,
+      setToDisplayCards,
+      setCards
+    );
   };
 
   return (
     <div className="flexContent">
-      <button className="dealBtn" onClick={handleDeal}>
+      <button className="dealBtn" onClick={handleClick}>
         Deal
       </button>
     </div>
