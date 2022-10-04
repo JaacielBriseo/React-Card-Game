@@ -1,5 +1,5 @@
 export const deck = [];
-const suits = ['diamonds', 'spades', 'clubs', 'hearts'];
+const suits = ['♦', '♠', '♣', '♥'];
 const values = [
   'Ace',
   '2',

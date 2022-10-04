@@ -1,6 +1,7 @@
-
 export const Winner = () => {
   return (
-    <div>Winner</div>
-  )
-}
+    <>
+      <h1 className="ribbon">Winner!</h1>
+    </>
+  );
+};

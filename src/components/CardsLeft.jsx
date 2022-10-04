@@ -3,11 +3,11 @@ import { Winner } from "./Winner"
 
 export const CardsLeft = ({deck,aces}) => {
   const resultsNegative = () => {
-    if(aces === 0 && deck.length >= 2)  
+    if(aces === 0 && deck.length != 0)  
      return true
    }
    const resultsPositive = () => {
-     if(aces === 1 && deck.length === 0){
+     if(aces === 0 && deck.length === 0){
        return true
      }
    }

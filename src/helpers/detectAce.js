@@ -1,18 +1,18 @@
 export const detectAce = (arr,value,aces) => {
     const valueToRest = []
-    if(arr.includes('Aceclubs')){
+    if(arr.includes('Ace♣')){
         valueToRest.push('1')
         value(aces -valueToRest.length)
     }
-    if(arr.includes('Acediamonds')){
+    if(arr.includes('Ace♦')){
         valueToRest.push('1')
         value(aces -valueToRest.length)
     }
-    if(arr.includes('Acehearts')){
+    if(arr.includes('Ace♥')){
         valueToRest.push('1')
         value(aces -valueToRest.length)
     }
-    if(arr.includes('Acespades')){
+    if(arr.includes('Ace♠')){
         valueToRest.push('1')
         value(aces -valueToRest.length)
     }
