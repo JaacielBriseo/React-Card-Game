@@ -24,10 +24,8 @@ export const DealButton = ({
   };
 
   return (
-    <div className="flexContent">
-      <button className="dealBtn" onClick={handleClick}>
-        Deal
-      </button>
-    </div>
+    <button className="dealBtn" onClick={handleClick}>
+      Deal
+    </button>
   );
 };

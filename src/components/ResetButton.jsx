@@ -3,10 +3,8 @@ export const ResetButton = () => {
     window.location.reload();
   };
   return (
-    <div className="flexReset">
-      <button className="resetBtn" onClick={handleReset}>
-        Reset
-      </button>
-    </div>
+    <button className="resetBtn" onClick={handleReset}>
+      Reset
+    </button>
   );
 };

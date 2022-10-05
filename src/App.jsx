@@ -6,6 +6,7 @@ export const App = () => {
   const [cards, setCards] = useState(deck);
   const [toDisplayCards, setToDisplayCards] = useState(['', '', '', '', '']);
   const [aces, setAces] = useState(4);
+  const [results, setResults] = useState(false)
 
   return (
     <>
@@ -18,6 +19,8 @@ export const App = () => {
         setToDisplayCards={setToDisplayCards}
         setAces={setAces}
         aces={aces}
+        results={results}
+        setResults={setResults}
       />
       <ResetButton />
     </>
