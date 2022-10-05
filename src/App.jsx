@@ -6,22 +6,29 @@ export const App = () => {
   const [cards, setCards] = useState(deck);
   const [toDisplayCards, setToDisplayCards] = useState(['', '', '', '', '']);
   const [aces, setAces] = useState(4);
-  const [results, setResults] = useState(false)
+  const [results, setResults] = useState(false);
 
   return (
     <>
       <h1>Cards Game</h1>
-      <CardsLeft deck={deck} aces={aces} />
-      <DisplayCards toDisplayCards={toDisplayCards} />
-      <DealButton
+      <CardsLeft
         deck={deck}
-        setCards={setCards}
-        setToDisplayCards={setToDisplayCards}
-        setAces={setAces}
         aces={aces}
-        results={results}
         setResults={setResults}
+        results={results}
       />
+      <DisplayCards toDisplayCards={toDisplayCards} />
+
+      {results === false && (
+        <DealButton
+          deck={deck}
+          setCards={setCards}
+          setToDisplayCards={setToDisplayCards}
+          setAces={setAces}
+          aces={aces}
+        />
+      )}
+
       <ResetButton />
     </>
   );

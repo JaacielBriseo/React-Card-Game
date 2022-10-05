@@ -1,7 +1,7 @@
 import { Looser } from "./Looser"
 import { Winner } from "./Winner"
 
-export const CardsLeft = ({deck,aces}) => {
+export const CardsLeft = ({deck,aces,setResults}) => {
   const resultsNegative = () => {
     if(aces === 0 && deck.length != 0)  
      return true
@@ -10,6 +10,9 @@ export const CardsLeft = ({deck,aces}) => {
      if(aces === 0 && deck.length === 0){
        return true
      }
+   }
+   if(resultsNegative() || resultsPositive()){
+    setResults(true)
    }
 
   return (
