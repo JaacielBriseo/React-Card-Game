@@ -7,9 +7,11 @@ export const DealButton = ({
   setToDisplayCards,
   setAces,
   aces,
+  results,
 }) => {
   const selectedCards = [];
   const toShow = [];
+
   const handleClick = () => {
     onDeal(
       deck,
@@ -22,10 +24,14 @@ export const DealButton = ({
       setCards
     );
   };
-
   return (
-    <button className="dealBtn" onClick={handleClick}>
-      Deal
-    </button>
+    <>
+      {results ===
+        false && (
+          <button className="dealBtn" onClick={handleClick}>
+            Deal
+          </button>
+        )}
+    </>
   );
 };
